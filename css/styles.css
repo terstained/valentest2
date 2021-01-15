@@ -8,9 +8,9 @@ body {
     background: url(content.png);
     background-size: contain;
     position: relative;
-    top: 8%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%,-50%);
     perspective: 1000px;
 }
 
