@@ -60,8 +60,8 @@ figure.back {
 
 @media only screen and (max-width: 1024px) {
     .container {
-    width: 600px;
-    height: 900px;
+    width: 667px;
+    height: 1000px;
     background: url(content.png);
     background-size: contain;
     position: relative;
