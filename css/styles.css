@@ -1,0 +1,59 @@
+body {
+    background: #f1ead4
+}
+
+.container {
+    width: 317px;
+    height: 450px;
+    background: url(content.png);
+    background-size: contain;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    perspective: 1000px;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -2px;
+    background-size: contain;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all .5s ease-in;
+}
+
+figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+figure.front {
+    background: url(cover.png);
+    background-size: contain;
+}
+
+figure.back {
+    background: url(innercover.png);
+    background-size: contain;
+    transform: rotateY(180deg);
+}
+  
+@media (any-hover: hover) {  
+    .container:hover .cover {
+        transform: rotateY(-180deg);
+    }
+}
+
+@media (any-hover: none) {  
+    .container.open .cover  {
+        transform: rotateY(-180deg);
+    }
+}
